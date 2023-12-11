@@ -7,9 +7,9 @@ const router = createBrowserRouter([
     Component: Outlet,
     children: [
       {
-        path: '/',
+        path: '/index.html',
         lazy: () => import('./Home'),
-      }
+      },
     ]
   }
 ])

@@ -7,7 +7,7 @@ import { TimeService } from '../openapi-client'
 
 export async function loader() {
   return {
-    time: await TimeService.get(),
+    time: (await TimeService.getTime()).time,
   }
 }
 
