@@ -3,10 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './Home.css'
 import { useLoaderData } from 'react-router-dom'
+import { TimeService } from '../openapi-client'
 
 export async function loader() {
   return {
-    time: (await fetch('/api/time').then((res) => res.json())).time,
+    time: await TimeService.get(),
   }
 }
 
